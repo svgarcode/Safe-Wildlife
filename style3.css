@@ -1,0 +1,564 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/**HEADER*/
+.header{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(21,21,21,0.5), rgba(21,21,21,0.6)), url(Images/aboutusbg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 40px 15px 50px;
+    background-color: black;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 20px ;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 50px;
+    font-weight: 5000;
+}
+.navbar ul li a:hover{
+    color: #FFB238;
+}
+.nav-dropdown{
+    position: relative;
+    display: inline-block;
+}
+.nav-dropdown li a{
+    padding: 0;
+    margin: 0;
+}
+.navbar .dropdown-content a{
+    padding: 15px 10px 10px;
+    color:black;
+}
+.nav-dropdown .dropdown-content li a:hover{
+    color: black;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    width: 100%;
+}
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+    padding: 0;
+    width: 250px;
+}
+.navbar .nav-dropdown .dropdown-content li:hover{
+    background-color: #ddd; 
+    width: 250px;
+    margin-left:0;
+    padding-left: 25px;
+}
+.search-container{
+    float: right;
+    margin-top: 10px;
+}
+.navbar input[type=text]{
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px 0 0 5px;
+}
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    border-radius: 0 5px 5px  0;
+    transition: 0.3s;
+}
+.navbar .search-container button:hover {
+    background: #F45D01;
+    color: #fff;
+}
+.header-content{
+    width: 100%;
+    position:absolute;
+    top: 23%;
+    color: #fff;
+    right: 800px;
+    text-align: right;
+}
+.header-content h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+}
+.header-content h1 span{
+    color: #FFB238;
+}
+.header-content p{
+    margin:20px auto ;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight:300;
+}
+.header-donate{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(21,21,21,0.55), rgba(21,21,21,0.6)), url(Images/donatebg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/*About Style*/
+.about{
+    width: 100%; 
+    background-color: #FFB238; 
+} 
+.history-main{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: 550px;
+}
+.history-main h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.history-main img{
+    width: 700px;
+    height: 550px;
+}
+.history-text{
+    margin: 10px 55px; 
+} 
+.history-text p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 18px;
+    line-height: 25px;
+    color: #333;
+} 
+.history-text span{
+    color: #F45D01;
+}
+.history-text label{
+    color: #F45D01;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.history-read-more,#about-check{
+    display: none;
+}
+#about-check:checked ~ .history-read-more{
+    display: block;
+}
+#about-check:checked ~ label{
+    visibility: hidden;
+}
+#about-check:checked ~ label::after{
+    content: 'Read Less';
+    display: block;
+    visibility:visible;
+}
+
+.our-main{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #F6F2EF;
+    padding: 50px 30px;
+}
+.our-main h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 20px 0;
+} 
+.our-main p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+    padding: 0 50px;
+    font-size: 18px;
+} 
+.our-text{
+    margin: 10px 30px; 
+    background-image: url(Images/fc7726.png);
+    padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.our-text h2{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+} 
+.our-text p{
+    padding: 0 80px;
+    font-size: 20px;
+} 
+.support{
+    margin: 10px 30px;
+    padding: 20px;
+    font-size: 20px;
+} 
+.support h2{
+    font-family: 'Open Sans', sans-serif;
+    color: #F45D01;
+    padding-bottom: 20px;
+    border-bottom: #F45D01 2px solid;
+    width: 55%;
+    margin: 0 auto 30px;
+}
+.support p{
+    color: #333;
+    line-height: 25px;
+}
+.support button{
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    background-color: #F45D01;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin-left: 225px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.support button:active{
+    border: 2px solid #000;
+}
+.support button:hover{
+    background-color: #FFB238;
+    color:black;
+}
+.leadership{
+    background-color: #f9f9f9;
+}
+.leadership h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px; 
+    text-transform: uppercase; 
+    margin-bottom: 30px; 
+    font-weight: 900; 
+    color: black;
+    text-align: center;
+    padding: 50px 0 30px 0;
+} 
+.leadership h1 span{
+    color: #F45D01;
+}
+.leader-content{
+    width: 90%; 
+    margin: 0 auto;
+    padding-bottom: 70px;
+    display: flex; 
+    align-items: center;
+} 
+.leader-content .pic{
+    width: 330px;
+    border-radius: 100%;
+} 
+.leader-content img:hover{
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.leader-text{
+    width: 100%;
+    padding: 0 30px 10px 50px;
+    text-align: justify;
+} 
+.leader-text h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #F45D01;
+}
+.leader-text h2 span{
+    color: #FFB238; 
+    font-size: 20px;
+}
+.leader-text p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    line-height: 23px;
+    color: black;
+    font-size: 18px;
+    margin-top: 20px;
+} 
+/*Donate Us*/
+.Doante_container{
+    max-width: 100%;
+    background-color: #F6F2EF;
+}
+.Donate_first{
+    padding: 30px 50px;
+    display: flex;
+}
+.Donate_first img{
+    width: 700px;
+    height: 400px;
+}
+.Donate_help{
+    margin: 50px 50px 0;
+    padding: 20px 30px 80px 50px;
+    text-align: center;
+}
+.Donate_help h1{
+    font-weight: 900;
+    font-size: 45px;
+    color:black;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+}
+.Donate_help h1 span{
+    color: #F45D01;
+}
+.Donate_help h3{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+    color: #F45D01;
+}
+.Donate_help p{
+    line-height: 30px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Donate_second{
+    height: 600px;
+    background-color: #F6F2EF;
+    width:80%;
+    margin: 50px auto 60px;
+}
+.Donate_second h1{
+    text-align: center;
+    color: #F45D01;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+.Donate_second h2{
+    font-size: 27px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.Donate_second label{
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 50px 30px 0 0 ;
+}
+
+.Donate_form1 input{
+    width: 250px;
+    height: 30px;
+    outline: rgb(69, 68, 68);
+}
+
+.Donate_second form input:focus,.Donate_form2 select:focus{
+    border: 2px solid #FFB238;
+}
+
+.Donate_second form input::placeholder{
+    padding-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.Donate_address input{
+    width: 74px;
+    margin-left: 10px;
+}
+
+.Donate_form2{
+    position: absolute;
+    left: 50%;
+    top: 1020px;
+}
+
+.Donate_form2 select{
+    padding: 10px 20px;
+}
+
+#Donate_number{
+    width: 70px;
+    height: 39px;
+    margin:0 10px;
+}
+
+#Donate_amount select{
+    width: 235px;
+    height: 39px;
+}
+
+#Donate_recieve-email{
+    margin: 20px 0;
+}
+
+#Donate_recieve-email input{
+    width: 13px;
+}
+
+#Donate_recieve-email input:focus{
+    background-color: #F45D01;
+}
+
+#Donate_recieve-email span{
+    color: gray;
+    position: relative;
+    top: -10px;
+}
+
+.Doante_container span{color: red;}
+
+.Donate_button{
+    margin: 50px 60px;
+}
+
+.Donate_button button{
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    background-color: #F45D01;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+}
+
+.Donate_button button:active{
+    border: 2px solid #000;
+}
+
+.Donate_button button:hover{
+    background-color: #FFB238;
+    color: black;
+}
+
+.Donate_button button:first-child{
+    margin-right: 50px;
+}
+
+/*Footer Style*/
+.footer{
+    width: 100%; 
+    background-color: black;
+    color: #fff;
+    padding: 30px 0; 
+    display: flex;
+    justify-content: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ;
+} 
+.footer div{
+    text-align: center;
+} 
+.footer div h3{
+    margin-bottom: 30px;
+    letter-spacing: 1px; 
+    font-weight: 400;
+} 
+.footer .col-1 a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    text-align: left; 
+    margin-bottom: 5px;
+} 
+.footer .col-1 a:hover{
+    color: #F45D01;
+}
+.footer .col-2{
+    flex-grow: 0.5;
+} 
+.footer form input{
+    width: 400px; 
+    height: 40px; 
+    border-radius: 5px; 
+    text-align: center; 
+    border: none; 
+    outline: none; 
+    margin-bottom: 40px;
+} 
+.footer form button{
+    padding: 10px 30px; 
+    border: 2px solid #FFB238;
+    border-radius: 50px; 
+    background: transparent; 
+    color: #fff;
+    font-size: 15px;
+    transition: 0.4s;
+} 
+.footer form button:hover{
+    background-color: #FFB238;
+    border: 2px solid #FFB238;
+    color: black;
+}
+.social-links{
+    margin-top: 30px; 
+    list-style: none;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+} 
+.social-links i{
+    font-size: 22px; 
+    margin: 0 10px 0;
+    transition: 0.8s;
+} 
+.social-links a{
+    text-decoration: none; 
+    color: #fff; 
+} 
+.social-links i:hover{
+    transform: rotateZ(360deg); 
+    color: #f45D01;
+} 
+.footer .col-3 a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer .col-3 a:hover{
+    color: #f45D01;
+}
+.footer .col-3 p{
+    margin-bottom: 10px;
+}
+.footer .col-1 a{
+    margin-bottom: 10px;
+}
+.copyright{
+    padding: 10px; 
+    background-color: #F45D01; 
+    color: white;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
